@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{% block title %}Add Your Movies{% endblock %}</title>
+
+  <font-link>
+    {% block fontlink %}
+  <link   href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap"
+          rel="stylesheet"
+  />
+  <link   href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+          rel="stylesheet">
+    {% endblock %}
+  </font-link>
+
+  {% block style %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  {% endblock %}
+</head>
+<body>
+    <div class="container">
+      {% block unchange_content %}
+        <div class="heading">
+          <a href="#"><img src="/static/images/logo.png" alt=""></a>
+          <ul>
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+
+        <div class="sub-head">
+          <ul>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">TV shows</a></li>
+          </ul>
+        </div>
+
+        <div class="aside">
+          <a href="{{url_for('add_movie') }}" class="aside-item">1. Getting Started</a>
+          <a href="{{ url_for('find_movie') }}" class="aside-item">2. Movie Details</a>
+        </div>
+
+      {% endblock %}
+
+      {% block add_content %}
+      <div class="description details">
+        <h1>Add Your Movies and Show</h1>
+        <p>Add your favourite Movies and Show in mymovies&show. Share your movies and show with your friends.</p>
+        <button><a href="{{ url_for('find_movie') }}">Next</a></button>
+      </div>
+      {% endblock %}
+
+
+    </div>
+
+
+  </body>
+</html>

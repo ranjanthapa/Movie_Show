@@ -1,0 +1,54 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block styles %}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style_select.css')}}">
+{% endblock %}
+
+{% block title %}
+    Select Movie
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <img src="/static/images/logo.png" alt="">
+    <h1>Search results</h1>
+    <div class="byline">Select your Search item. The search list are below</div>
+    <hr>
+    <div class="lister">
+        <h4>Showing {{num_of_movie}} results</h4>
+        <table class="table">
+            <thead>
+                <tr>
+
+                    <td></td>
+                    <td>Movie Title</td>
+                    <td>Release date</td>
+                    <td>Rating</td>
+                </tr>
+            </thead>
+            <tbody>
+
+            {% for movie in options %}
+
+                <tr>
+                    <td>
+                        <a href="{{ url_for('selected_movie', id=movie['id']) }}">
+                            <img src="{{img_url}}{{movie['poster_path']}}" height="67" width="47">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ url_for('selected_movie', id=movie['id']) }}">{{loop.index}}. {{movie['title']}}</a>
+                    </td>
+                    <td>{{movie['release_date']}}</td>
+                    <td>⭐{{movie['vote_average']}}</td>
+                </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}
+

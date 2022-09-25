@@ -1,0 +1,39 @@
+{% extends 'add.html' %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+{% block add_content %}
+    <div class="description add_movie">
+        <h1>Movie Details</h1>
+        <form action="" method="POST">
+            <div class="form">
+                <label for="title" class="form-label">Movie-Title</label>
+                <br>
+                <input type="text" class="form-field" id="title" name="movie_title" placeholder="e.g Unbroken">
+            </div>
+
+            <div class="form">
+                <label for="description" class="form-label">Movie-Overview </label>
+                <br>
+                <input type="text" class="form-field des" id="description" name="movie_quote" placeholder="A moment of pain is worth a lifetime glory">
+            </div>
+
+            <div class="form">
+                <label for="imbd" class="form-label">IMBD</label>
+                <br>
+                <input type="text" class="form-field" id="imbd" name="movie_imbd" placeholder="e.g 7">
+            </div>
+
+            <button type="submit"><a href="{{url_for('select_movie')}}">Next</a></button>
+        </form>
+    </div>
+        {% endblock %}
+</body>
+</html>

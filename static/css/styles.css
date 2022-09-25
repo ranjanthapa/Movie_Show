@@ -1,0 +1,162 @@
+* {
+  padding: 0px;
+  margin: 0px;
+
+}
+
+body {
+  background-color: #282120;
+}
+
+.container {
+  position: relative;
+  background-color: whitesmoke;
+  height: 600px;
+  width: 800px;
+  margin: auto;
+  border: 1px solid;
+}
+
+.heading {
+  background-color: #b9b49e;
+  height: 80px;
+  padding: 20px 20px 0px 20px;
+  font-family: Oswald;
+  border-bottom: 1px solid;
+}
+
+.heading ul {
+  position: relative;
+  text-align: right;
+  top: -20px;
+}
+
+.heading ul li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:focus {
+  color: black;
+}
+
+a:active {
+  color: #1f2322;
+}
+
+a {
+  color: black;
+}
+
+.sub-head {
+  position: relative;
+  background-color:#b9b49e ;
+  height: 50px;
+  font-family: Oswald;
+  padding-top: 20px;
+  border-bottom: 1px solid;
+}
+
+.sub-head ul {
+  text-align: center;
+  color: black;
+}
+
+.sub-head ul li {
+  display: inline-block;
+  text-align: center;
+  margin-left: 50px;
+  font-size: 20px;
+}
+
+.aside {
+  background-color: #b9b49e;
+  display: flex;
+  width: 300px;
+  height: 428px;
+  border-right: 1px solid black;
+  flex-direction: column;
+  font:20px poppins;
+  align-items: center;
+  justify-content: center;
+}
+
+.aside-item{
+  margin-bottom: 20px;
+}
+
+.aside a:focus{
+  opacity: 0.2;
+}
+
+.description{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  top: -428px;
+  left: 301px;
+  width: 499px;
+  height: 428px;
+  background-color: #b9b49e;
+  font-family: Poppins;
+}
+
+.description h1, p, button{
+  align-self: center;
+  margin:30px 30px 60px 30px;
+}
+
+.description button{
+  width: 100px;
+  padding: 5px;
+  background-color: #b9b49e;
+  border-radius: 5px;
+  font: 20px bold;
+  font-family: Poppins;
+  align-self: flex-end;
+}
+
+.description p{
+  margin-bottom: 10px;
+}
+
+.add_movie{
+  justify-content: center;
+  align-items: flex-start;
+}
+.add_movie h1{
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+.form-label{
+  opacity: 0.7;
+
+}
+.form{
+  margin-left: 30px;
+}
+
+.form-field{
+  width: 200%;
+  padding: 12px;
+  border: 0.8px solid black;
+  margin-bottom: 10px;
+  border-radius: 5px;
+
+}
+
+.des{
+
+}
+
+input:focus{
+  outline: none;
+  box-shadow: 2px 2px 2px;
+}
+
+
